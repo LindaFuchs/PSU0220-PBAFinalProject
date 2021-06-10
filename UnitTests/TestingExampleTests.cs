@@ -33,7 +33,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void SixAndTwoIsEight()
+        public void AdditionTest()
         {
             // Arrange
             expected = 8;
@@ -44,18 +44,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void SixAndTwoIsNotZero()
-        {
-            // Arrange
-            expected = 0;
-            // Act
-            result = TestExample1.Add(x, y);
-            // Assert
-            Assert.AreNotEqual(expected, result);
-        }
-
-        [TestMethod]
-        public void SixMinusTwoIsFour()
+        public void DeductionTest()
         {
             // Arrange
             expected = 4;
@@ -66,18 +55,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void SixMinusTwoIsNotZero()
-        {
-            // Arrange
-            expected = 0;
-            // Act
-            result = TestExample1.Deduct(x, y);
-            // Assert
-            Assert.AreNotEqual(expected, result);
-        }
-
-        [TestMethod]
-        public void SixTimeTwoIsTwelve()
+        public void MultiplicationTest()
         {
             // Arrange
             expected = 12;
@@ -88,18 +66,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void SixTimeTwoIsNotZero()
-        {
-            // Arrange
-            expected = 0;
-            // Act
-            result = TestExample1.Multiply(x, y);
-            // Assert
-            Assert.AreNotEqual(expected, result);
-        }
-
-        [TestMethod]
-        public void SixDividedTwoIsThree()
+        public void DivisionTest()
         {
             // Arrange
             expected = 3;
@@ -114,11 +81,12 @@ namespace UnitTests
         {
             // Arrange
             string expectedString = "y is not 0";
-            string resultString = "y is not 0";
-            if (y==0)
+            string resultString;
+            if (y == 0)
             {
                 resultString = "y = 0";
-            } 
+            }
+            else resultString = "y is not 0";
             // Act
             result = TestExample1.Divide(x, y);
             // Assert
